@@ -27,6 +27,7 @@ function SourceIngameTip()
   SKIN:Bang('!SetOption', 'MeterTitle', 'Text', tip_titles[chosen_tip])
   SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text[chosen_tip])
   SKIN:Bang('!SetOption', 'MeterBackdrop', 'LeftMouseDownAction', "")
+  SKIN:Bang('!SetVariable', 'CurrentTip', chosen_tip)
 end
 
 function SourceWeatherForTip()
