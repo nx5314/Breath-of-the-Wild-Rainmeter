@@ -1,9 +1,39 @@
 function Initialize()
   dofile(SKIN:GetVariable('@') .. "JSON.lua")
+  dofile(SKIN:GetVariable('@') .. "gametips.lua")
   previous_links = {}
 end
 
 function Update()
+  SKIN:Bang('!SetOption', 'MeterTitle', 'Text', "")
+  SKIN:Bang('!SetOption', 'MeterTip', 'Text', "")
+  SKIN:Bang('!SetOption', 'MeterBackdrop', 'LeftMouseDownAction', "")
+  SKIN:Bang('!SetVariable', 'CurrentTip', '-1')
+
+  local tip_choices = {}
+
+  if SKIN:GetVariable('RedditTips') ~= '0' then tip_choices[#tip_choices + 1] = SourceRedditForTip end
+  if SKIN:GetVariable('WeatherTips') ~= '0' then tip_choices[#tip_choices + 1] = SourceWeatherForTip end
+  if SKIN:GetVariable('GameTips') ~= '0' then tip_choices[#tip_choices + 1] = SourceIngameTip end
+
+  if #tip_choices > 0 then
+    local choice = math.random(#tip_choices)
+    tip_choices[choice]()
+  end
+end
+
+function SourceIngameTip()
+  local chosen_tip = math.random(#tip_titles)
+  SKIN:Bang('!SetOption', 'MeterTitle', 'Text', tip_titles[chosen_tip])
+  SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text[chosen_tip])
+  SKIN:Bang('!SetOption', 'MeterBackdrop', 'LeftMouseDownAction', "")
+end
+
+function SourceWeatherForTip()
+  
+end
+
+function SourceRedditForTip()
   local page_raw = SKIN:GetMeasure('MeasureRedditJson'):GetStringValue()
   local page = decode_json(page_raw)
   if page == nil then return end
@@ -35,8 +65,10 @@ function Update()
   SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text)
   if tip_has_link then
     SKIN:Bang('!SetOption', 'MeterBackdrop', 'LeftMouseDownAction', "["..tip_link.."]")
+    return true
   else
     SKIN:Bang('!SetOption', 'MeterBackdrop', 'LeftMouseDownAction', "")
     previous_links = {}
+    return false
   end
 end
