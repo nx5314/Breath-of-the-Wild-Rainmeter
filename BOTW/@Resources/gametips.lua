@@ -161,17 +161,11 @@ tip_titles = {
   "Weapon Durability",
   "What's That Pooch?",
   "Where's the Fire?",
-  "Wild Horses",
-  "Wolf Link",
-  "Wolf Link",
-  "Wolf Link",
-  "Wolf Link",
-  "Wolf Link",
-  "Wolf Link"
+  "Wild Horses"
 }
 
 tip_text = {
-  "Some items, like bows, allow you to target things by tilting GAMEPAD. Remember to be aware of your surroundings when doing this.",
+  "Some items, like bows, allow you to target things by tilting [SWITCH]. Remember to be aware of your surroundings when doing this.",
   "Some amiibo may only be used once per day.",
   "Use an amiibo to summon forth an item that may be useful to you on your adventure!",
   "These energy furnaces glow with a blue flame. They are said to be creations of the ancient Sheikah race. It may be true, as they've been burning for 10,000 years.",
@@ -333,11 +327,5 @@ tip_text = {
   "Durability varies with every weapon. Always be aware of the condition of your equipment. A weapon breaking at the wrong time is never a good thing.",
   "If you befriend a dog, it may lead you to something interesting.",
   "When a wooden weapon or shield catches fire, you can extinguish it by unequipping the burning item.",
-  "If you see a wild horse you'd like to ride, crouch down so you can approach it quietly from behind. Take heed, though–if the horse notices you while you're directly behind it, it will kick you!",
-  "Wolf Link will stay still if you select Stay while locked on to him. Select Come while he's waiting to make him follow you again.",
-  "Wolf Link will eat whatever food is in front of him to regain his hearts.. If you don't want him to eat rare ingredients, use the Stay command to have him stay in place while you collect them.",
-  "As long as Wolf Link doesn't run out of hearts, you can summon him as many times as you want in a single day.",
-  "If your Sheikah Sensor picks up a signal, Wolf Link will lead you to its source.",
-  "Whistle to call Wolf Link to your location. If you tap the amiibo a second time, you can recall him close to you.",
-  "Wolf Link is summoned from another plane of existence and can't be seen by other people in this world."
+  "If you see a wild horse you'd like to ride, crouch down so you can approach it quietly from behind. Take heed, though–if the horse notices you while you're directly behind it, it will kick you!"
 }
