@@ -47,8 +47,7 @@ function SourceIngameTip()
 end
 
 function SourceWeatherForTip()
-  print("ip: " .. SKIN:GetVariable('WANIP'))
-  print("location: " .. SKIN:GetVariable('WeatherLocation'))
+  local unit = string.upper(SKIN:GetVariable('WeatherUnit'))
   local page_raw = SKIN:GetMeasure('MeasureWeatherWebsite'):GetStringValue()
   local page = decode_json(page_raw)
   if page == nil then return end
@@ -56,21 +55,21 @@ function SourceWeatherForTip()
   local weather_info = page.query.results.channel
   if weather_index == 0 then
     SKIN:Bang('!SetOption', 'MeterTitle', 'Text', "Today's Weather")
-    local tip_text = weather_info.item.condition.temp .. " degrees, " .. weather_info.item.condition.text .. ". "
+    local tip_text = weather_info.item.condition.temp .. " " .. unit .. "°, " .. weather_info.item.condition.text .. ". "
     tip_text = tip_text .. "Wind speeds of " .. weather_info.wind.speed .. weather_info.units.speed
     tip_text = tip_text .. " and " .. weather_info.atmosphere.humidity .. "% humidity."
     SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text)
   elseif weather_index == 1 then
     SKIN:Bang('!SetOption', 'MeterTitle', 'Text', "Tomorrow's Forecast")
     local tomorrow = weather_info.item.forecast[1]
-    local tip_text = tomorrow.text .. "; highs of " .. tomorrow.high .. " degrees and lows of " .. tomorrow.low .. " degrees."
+    local tip_text = tomorrow.text .. "; highs of " .. tomorrow.high .. " " .. unit .. "° and lows of " .. tomorrow.low .. " " .. unit .. "°."
     SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text)
   elseif weather_index == 2 then
     SKIN:Bang('!SetOption', 'MeterTitle', 'Text', "Five-day Forecast")
     local tip_text = ""
     for i=1,5 do
       local day_weather = weather_info.item.forecast[i]
-      tip_text = tip_text .. day_weather.day .. ": " .. day_weather.high .. " degrees, " .. day_weather.text .. ".  "
+      tip_text = tip_text .. day_weather.day .. ": " .. day_weather.high .. " " .. unit .. "°, " .. day_weather.text .. ".  "
     end
     SKIN:Bang('!SetOption', 'MeterTip', 'Text', tip_text)
   elseif weather_index == 3 then
