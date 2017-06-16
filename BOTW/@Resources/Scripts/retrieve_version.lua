@@ -1,5 +1,5 @@
 function Initialize()
-  dofile(SKIN:GetVariable('@') .. "JSON.lua")
+  dofile(SKIN:GetVariable('@') .. "Scripts\\JSON.lua")
 end
 
 function Update()
