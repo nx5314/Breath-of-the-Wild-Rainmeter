@@ -241,7 +241,7 @@ tip_text = {
   "When fighting on horseback, use      to focus your attention, making it easier to aim.",
   "When fighting on horseback, weapons with reach such as spears and big swords have an advantage over short swords and clubs.",
   "These lush, thermal baths are found throughout the world. You can relax in them for a while to replenish your hearts.",
-  "Images captures with your Camera are logged in your Hyrule Compendium. Things that can be logged include wildlife, monsters, ingredients, and weapons.",
+  "Images captured with your Camera are logged in your Hyrule Compendium. Things that can be logged include wildlife, monsters, ingredients, and weapons.",
   "If you find yourself surrounded by an overwhelming number of enemies, try using Ice Arrows to freeze them in their tracks.",
   "When you attack Ice Chuchus, they explode in a burst of frost. Use this to your advantage to put nearby monsters on ice.",
   "You can only enjoy one effect from a dish or elixir at any given time. If you're relying on an active effect, be careful not to cancel it by eating something with a new effect.",
