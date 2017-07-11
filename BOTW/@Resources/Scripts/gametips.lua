@@ -285,7 +285,7 @@ tip_text = {
   "In order to hitch a ride behind a sand seal, you'll first need to equip a shield.",
   "These large beasts native to the Gerudo Desert are much friendlier than they look. They've been domesticated over time for use as a mode of transportation.",
   "Sand seals provide a fast way to travel across sand. When hitching a ride, be careful not to run into any rocks!",
-  "When you find an object or place of interest while looking through your scope, press A to place a pin on your map in that location so you wont forget about it.",
+  "When you find an object or place of interest while looking through your scope, press     to place a pin on your map in that location so you wont forget about it.",
   "In the extreme heat of volcanic regions, wooden bows or shields you have equipped will catch fire. It's better to use metal equipment instead.",
   "The extreme temperatures of volcanic regions will hurt you without the proper precautions. Wear fireproof equipment or down an elixir to stave off the heat.",
   "In the extreme heat of volcanic regions, ingredients will cook simply by placing them on the ground. Use this to your advantage to prepare meals on the go.",
